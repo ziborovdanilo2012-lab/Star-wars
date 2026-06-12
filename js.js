@@ -53,7 +53,7 @@ function loadSuggestionsAndRandoms() {
 
       randomContainer.innerHTML = "";
       let shuffled = [...filteredData].sort(() => 0.5 - Math.random());
-      let randomItems = shuffled.slice(0, 1000);
+      let randomItems = shuffled.slice(0, 500);
 
       randomItems.forEach(item => {
         let miniCard = document.createElement("div");
@@ -62,6 +62,7 @@ function loadSuggestionsAndRandoms() {
         miniCard.onclick = () => {
           searchInput.value = item.name;
           searchButton.click();
+          window.scrollTo({ top: 0, behavior: "smooth" });
         };
         
         randomContainer.appendChild(miniCard);
