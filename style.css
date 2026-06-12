@@ -1,0 +1,207 @@
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    background-color: black;
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heder_text{
+    font-size: 100px;
+}
+.input_button{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid yellow;
+    border-radius: 20px;
+    animation-name: glow;      
+    animation-duration: 5s;    
+    animation-iteration-count: infinite; 
+    animation-direction: alternate;      
+}
+.input{
+    width: 400px;
+    height: 33px;
+    border-radius: 5px;
+    background-color: rgb(17, 17, 17);
+    border: 1px solid rgb(255, 230, 0);
+    border-radius: 8px;
+    color: rgb(255, 230, 0);
+    padding: 0 15px;
+    outline: none;
+}
+.input:focus {
+    background-color: rgb(0, 0, 0); 
+    border-color: rgb(255, 255, 255);        
+    box-shadow: inset 0 0 8px rgba(255, 255, 0, 0.5),
+  0 0 8px rgba(255, 255, 0, 0.5);
+}
+.btnheder{
+    width: 34px;
+    height: 33px;
+    background-color: black;
+    border-radius: 10px;
+    border: 1px solid yellow;
+    padding: 1px;
+    margin: 0 5px;
+}
+.btnheder:hover{
+    box-shadow: 0 0 15px yellow;
+    transition: 0.5s;
+}
+.btns{
+    display: flex;
+    flex-direction: row;
+}
+.btn{
+    margin: 10px;
+    background-color: rgba(60, 60, 60, 0.508);
+    width: 100px;
+    height: 40px;
+    border-radius: 10px;
+    color: yellow;
+    border: 1px solid gray;
+}
+.activ{
+    box-shadow: 0 0 15px;
+    border-color: yellow;
+}
+@keyframes glow {
+    0%{
+        box-shadow: none;
+    }
+    100%{
+        box-shadow: 0 0 15px yellow;
+    }
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px;
+}
+#idcart {
+    background-color: #0c0c0c; 
+    border: 1px solid rgba(255, 230, 0, 0.3);
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    transition: 0.3s ease;
+    display: none;
+}
+#idcart:has(span:not(:empty)) {
+    border-color: #ffe600;
+    box-shadow: 0 0 20px rgba(255, 230, 0, 0.15);
+}
+#idcart img {
+    max-width: 150px;
+    margin-bottom: 20px;
+}
+#idcart p {
+    color: #fff; 
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+#idcart span {
+    display: block;
+    color: #ffe600; 
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #ffe600;
+    text-align: left; 
+}
+#random-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 30px;
+    width: 100%;
+    max-width: 1000px;
+}
+#random-container div {
+    background-color: #0c0c0c;
+    border: 1px solid rgba(255, 230, 0, 0.4);
+    border-radius: 12px;
+    padding: 20px;
+    width: 220px;
+    text-align: center;
+    cursor: pointer;
+    color: yellow;
+    transition: all 0.3s ease;
+}
+#random-container div:hover {
+    box-shadow: 0 0 15px rgba(255, 230, 0, 0.6);
+    border-color: #ffe600;
+    transform: translateY(-5px);
+}
+#random-container div b {
+    font-size: 18px;
+    color: #fff;
+    display: block;
+    margin-bottom: 8px;
+}
+#random-container div span {
+    font-size: 12px;
+    color: #888;
+}
+.filters {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    letter-spacing: 4px;
+}
+.filters label {
+    color: yellow;
+    font-size: 18px;
+}
+.filters select {
+    background-color: black;
+    color: yellow;
+    border: 1px solid yellow;
+    padding: 6px 12px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+.filters select:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
+}
+@media (max-width: 768px) {
+    .heder_text {
+        font-size: 50px;
+        letter-spacing: 3px;
+    }
+    .input_button {
+        width: 90%;
+        max-width: 420px;
+        justify-content: center;
+    }
+    .input {
+        width: 100%;
+        max-width: 300px;
+    }
+}
