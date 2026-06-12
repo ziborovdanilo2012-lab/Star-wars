@@ -14,28 +14,25 @@
             <input type="text" placeholder="Наприклад: X-wing" class="input" list="suggestions">
             <button class="btnheder"><img src="free-icon-font-search.png" alt="" class="img"></button>
             <datalist id="suggestions"></datalist>
-        </div>
-        <div class="btns">
-            <button class="btn activ" id="btn1">Space shipі</button>
-            <button class="btn" id="btn2">Characters</button>
-        </div>
-        <div class="filters" style="margin-top: 15px;">
-            <label for="filter-select" style="color: yellow; margin-right: 10px;">Фільтр:</label>
-            <select id="filter-select" style="background: black; color: yellow; border: 1px solid yellow; padding: 5px; border-radius: 5px;">
+            
+            <select id="filter-select">
                 <option value="all">Усі кораблі</option>
                 <option value="starfighter">Винищувачі (Starfighter)</option>
                 <option value="capital">Крейсери (Capital ship)</option>
             </select>
         </div>
+        <div class="btns">
+            <button class="btn activ" id="btn1">Space shipі</button>
+            <button class="btn" id="btn2">Characters</button>
+        </div>
     </header>
-    <main style="flex-direction: column; align-items: center; gap: 30px;">
+    <main>
         <div id="idcart">
             <div id="photo-box"></div>
             <p>Description:</p>
             <span></span>
         </div>
-
-        <div id="random-container" style="display: flex; gap: 20px; flex-wrap: wrap; justify-content: center; margin-top: 20px; width: 100%; max-width: 1000px;"></div>
+        <div id="random-container"></div>
     </main>
 </body>
 </html>
