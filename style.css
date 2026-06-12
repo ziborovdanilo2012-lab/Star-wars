@@ -1,9 +1,8 @@
-
-
 *{
     padding: 0;
     margin: 0;
     text-decoration: none;
+    box-sizing: border-box;
 }
 body{
     background-color: black;
@@ -15,14 +14,19 @@ header{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 .heder_text{
     font-size: 100px;
+    letter-spacing: 5px;
+    text-align: center;
 }
 .input_button{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
     margin: 20px;
     padding: 10px;
     border: 1px solid yellow;
@@ -56,11 +60,24 @@ header{
     border-radius: 10px;
     border: 1px solid yellow;
     padding: 1px;
-    margin: 0 5px;
 }
 .btnheder:hover{
     box-shadow: 0 0 15px yellow;
     transition: 0.5s;
+}
+#filter-select {
+    background-color: black;
+    color: yellow;
+    border: 1px solid yellow;
+    height: 33px;
+    padding: 0 10px;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+#filter-select:focus {
+    box-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
 }
 .btns{
     display: flex;
@@ -166,42 +183,38 @@ main {
     font-size: 12px;
     color: #888;
 }
-.filters {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    letter-spacing: 4px;
-}
-.filters label {
-    color: yellow;
-    font-size: 18px;
-}
-.filters select {
-    background-color: black;
-    color: yellow;
-    border: 1px solid yellow;
-    padding: 6px 12px;
-    border-radius: 8px;
-    font-family: Arial, sans-serif;
-    outline: none;
-    cursor: pointer;
-}
-.filters select:focus {
-    box-shadow: 0 0 8px rgba(255, 255, 0, 0.5);
-}
+
 @media (max-width: 768px) {
     .heder_text {
         font-size: 50px;
         letter-spacing: 3px;
     }
     .input_button {
-        width: 90%;
+        width: 95%;
         max-width: 420px;
         justify-content: center;
     }
     .input {
         width: 100%;
         max-width: 300px;
+    }
+    #filter-select {
+        width: 100%;
+        max-width: 300px;
+    }
+    #idcart {
+        width: 95%;
+        padding: 20px;
+    }
+    #idcart p {
+        font-size: 24px;
+    }
+    #random-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #random-container div {
+        width: 90%;
+        max-width: 350px;
     }
 }
